@@ -6,15 +6,16 @@ if (process.env.NODE_ENV !== "production") {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Stimbodyfit`,
+    author: "woodstock13",
+    description: `La solution Electrofitness sur Marseille`,
+    siteUrl: `https://stimbodyfit.fr/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `Stimbodyfit`,
     },
   },
   plugins: [
+    "gatsby-plugin-sass",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
