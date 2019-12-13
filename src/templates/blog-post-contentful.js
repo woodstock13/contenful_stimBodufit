@@ -1,9 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import MainImage from "../components/mainImage"
 import { rhythm, scale } from "../utils/typography"
 
 class BlogPostContentfulTemplate extends React.Component {
@@ -15,7 +17,8 @@ class BlogPostContentfulTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.title} description={post.title} />
-        <Img fluid={post.image.fluid}></Img>
+        <MainImage location={this.props.location} />
+        {/* <Img fluid={post.image.fluid}></Img> */}
         <article>
           <header>
             <h1

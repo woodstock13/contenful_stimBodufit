@@ -5,8 +5,8 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Header from "../components/header"
 import { rhythm } from "../utils/typography"
+import MainImage from "../components/mainImage"
 
 const Post = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const PostImage = styled.div`
 const PostText = styled.div`
   flex: 75%;
 `
-class BlogIndex extends React.Component {
+class HomePage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -28,14 +28,15 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Header />
+        <MainImage location={this.props.location} />
+        {/* TODO a cpt of blog */}
         {posts.map(({ node }) => {
           const title = node.title
           const description = node.description.childMarkdownRemark.html
           return (
             <Post key={node.slug}>
               <PostImage>
-                <Link to={node.slug}>
+                <Link to={"blog/" + node.slug}>
                   <Img fluid={node.image.fluid} />
                 </Link>
               </PostImage>
@@ -45,7 +46,7 @@ class BlogIndex extends React.Component {
                     marginBottom: rhythm(1 / 4),
                   }}
                 >
-                  <Link style={{ boxShadow: `none` }} to={node.slug}>
+                  <Link style={{ boxShadow: `none` }} to={"blog/" + node.slug}>
                     {title}
                   </Link>
                 </h3>
@@ -63,7 +64,7 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
   query {
