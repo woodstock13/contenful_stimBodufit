@@ -18,24 +18,24 @@ class Layout extends React.Component {
         <Navbar bg="light">
           <Navbar.Brand>
             <Link className="navbar-item" title="Logo" to="/">
-              {title}
+              {title || "StimbodyFit"}
               {/* <img src={logo} alt="Kaldi" style={{ width: '88px' }} /> */}
             </Link>
           </Navbar.Brand>
           <ButtonGroup className="navbar-start has-text-centered">
             <Button variant="Light">
-              <Link className="navbar-item" to="/">
+              <Link className="navbar-item" to="/technologyPage">
                 Nos Technologies
               </Link>
             </Button>
             <Button className="navbar-item" variant="Light">
-              <Link to="/">Nos Témoignages</Link>
+              <Link to="/testimonyPage">Nos Témoignages</Link>
             </Button>
             <Button className="navbar-item" variant="Light">
-              <Link to="/">Nos Prix</Link>
+              <Link to="/pricePage">Nos Prix</Link>
             </Button>
             <Button className="navbar-item" variant="Light">
-              <Link to="/">Prendre RDV !</Link>
+              <Link to="/contactPage">Prendre RDV !</Link>
             </Button>
           </ButtonGroup>
         </Navbar>
