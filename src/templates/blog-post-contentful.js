@@ -6,7 +6,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainImage from "../components/mainImage"
-import { rhythm, scale } from "../utils/typography"
 
 class BlogPostContentfulTemplate extends React.Component {
   render() {
@@ -23,7 +22,6 @@ class BlogPostContentfulTemplate extends React.Component {
           <header>
             <h1
               style={{
-                marginTop: rhythm(1),
                 marginBottom: 0,
               }}
             >
@@ -31,9 +29,7 @@ class BlogPostContentfulTemplate extends React.Component {
             </h1>
             <p
               style={{
-                ...scale(-1 / 5),
                 display: `block`,
-                marginBottom: rhythm(1),
               }}
             >
               {post.date}
@@ -44,11 +40,7 @@ class BlogPostContentfulTemplate extends React.Component {
               __html: post.content.childContentfulRichText.html,
             }}
           />
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
+          <hr />
           <footer>{/* TODO */}</footer>
         </article>
 
@@ -64,14 +56,14 @@ class BlogPostContentfulTemplate extends React.Component {
           >
             <li>
               {previous && (
-                <Link to={previous.slug} rel="prev">
+                <Link to={"blog/" + previous.slug} rel="prev">
                   ← {previous.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.slug} rel="next">
+                <Link to={"blog/" + next.slug} rel="next">
                   {next.title} →
                 </Link>
               )}

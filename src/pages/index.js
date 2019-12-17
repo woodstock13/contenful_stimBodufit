@@ -1,71 +1,31 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 import MainImage from "../components/mainImage"
+import Arguments from "../components/arguments"
+import BlogList from "../components/blogList"
 
-const Post = styled.div`
-  display: flex;
-  margin: 1rem;
-`
-const PostImage = styled.div`
-  flex: 25%;
-  margin-right: 1rem;
-`
-const PostText = styled.div`
-  flex: 75%;
-`
 class HomePage extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const posts = data.allContentfulPost.edges
+    const postsData = data.allContentfulPost.edges
+    const argumentsContent = data.allContentfulArguments.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Electrofitness Marseille" />
         <MainImage location={this.props.location} />
-        {/* TODO a cpt of blog */}
-        {posts.map(({ node }) => {
-          const title = node.title
-          const description = node.description.childMarkdownRemark.html
-          return (
-            <Post key={node.slug}>
-              <PostImage>
-                <Link to={"blog/" + node.slug}>
-                  <Img fluid={node.image.fluid} />
-                </Link>
-              </PostImage>
-              <PostText>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link style={{ boxShadow: `none` }} to={"blog/" + node.slug}>
-                    {title}
-                  </Link>
-                </h3>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: description,
-                  }}
-                />
-              </PostText>
-            </Post>
-          )
-        })}
+        <Arguments arguments={argumentsContent} />
+        <BlogList posts={postsData} />
       </Layout>
     )
   }
 }
 
 export default HomePage
-
 export const pageQuery = graphql`
   query {
     site {
@@ -73,19 +33,33 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulPost {
+    allContentfulPost(sort: { fields: createdAt, order: DESC }) {
       edges {
         node {
           title
           slug
+          createdAt(formatString: "DD MMMM YYYY")
           image {
             fluid {
-              ...GatsbyContentfulFluid
+              src
             }
           }
           description {
             childMarkdownRemark {
-              html
+              rawMarkdownBody
+            }
+          }
+        }
+      }
+    }
+    allContentfulArguments(sort: { order: ASC, fields: createdAt }) {
+      totalCount
+      edges {
+        node {
+          title
+          text {
+            childMarkdownRemark {
+              rawMarkdownBody
             }
           }
         }

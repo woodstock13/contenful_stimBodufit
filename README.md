@@ -95,3 +95,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## DEBUG enDev :
+
+- Si erreur graphQl & contentufl (n'affiche plus le contenu ) --> npm outdated + npm update (mm sur des versions mineurs) sur : gatsby-transformer-sharp & gatsby-source-contentful OK
