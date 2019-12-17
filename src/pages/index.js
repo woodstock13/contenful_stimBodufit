@@ -8,6 +8,7 @@ import ArgumentsList from "../components/argumentsList"
 import BlogList from "../components/blogList"
 import Title from "../components/Title"
 import ProcessusList from "../components/processusList"
+import CarouselComponent from "../components/carouselComponent"
 
 class HomePage extends React.Component {
   render() {
@@ -26,7 +27,8 @@ class HomePage extends React.Component {
         <BlogList posts={postsData} />
         <Title title={"Notre Méthodologie"} />
         <ProcessusList />
-        {/* <Title title={"Nos Coachs"} /> */}
+        <Title title={"Nos Coachs"} />
+        <CarouselComponent />
         {/* <Title title={"Nos Tarifs"} /> */}
         {/* <Title title={"Nous Trouver"} /> */}
       </Layout>

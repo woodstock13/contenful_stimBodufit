@@ -27,6 +27,7 @@ function ArgumentsList(props) {
           />
         ))}
       </Col>
+      {/* TODO: Rework 3 col */}
       <Col xs={{ order: 6 }} md={4}>
         <MainImage>
           <Img fluid={fluid} />
