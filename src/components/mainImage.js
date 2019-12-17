@@ -9,6 +9,8 @@ function MainImage(props) {
   let isPathBlog = "blog/"
   let currentPath = props.location.pathname
 
+  // TODO : add card overlay : https://react-bootstrap.netlify.com/components/cards/#image-overlays
+
   if (currentPath.search(isPathBlog) !== -1) {
     //blog page :
     bannerImage = (

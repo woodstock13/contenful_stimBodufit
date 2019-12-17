@@ -7,7 +7,7 @@ import BlogItem from "./blogItem"
 
 function BlogList(props) {
   return (
-    <Row>
+    <Row style={{ margin: "0 auto" }}>
       {props.posts.slice(0, 3).map(({ node }) => (
         <BlogItem key={node.slug} data={node} />
       ))}

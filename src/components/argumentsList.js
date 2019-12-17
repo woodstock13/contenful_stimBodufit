@@ -3,40 +3,10 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Row, Col, Card } from "react-bootstrap"
-import styles from "./arguments.scss"
+import { Row, Col, Card, Media } from "react-bootstrap"
+import ArgumentItem from "./argumentItem"
 
-function createCardArgument(objArgument) {
-  let argumentTitle = objArgument.node.title
-  let argumentText = objArgument.node.text.childMarkdownRemark.rawMarkdownBody
-
-  const OneArgument = styled.div`
-    height: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 1em;
-  `
-  const LimitSizeArgument = styled.div`
-    height: 100%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  `
-
-  return (
-    <OneArgument>
-      <Card>
-        <Card.Body>
-          <Card.Title>{argumentTitle}</Card.Title>
-          <Card.Text>
-            <LimitSizeArgument>{argumentText}</LimitSizeArgument>
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    </OneArgument>
-  )
-}
-
-function Arguments(props) {
+function ArgumentsList(props) {
   const { fluid } = useMediaImage()
   let aArguments = props.arguments
   let argumentsComponent
@@ -49,8 +19,12 @@ function Arguments(props) {
   argumentsComponent = (
     <Row>
       <Col xs={{ order: 1 }} md={{ order: 1 }}>
-        {aArguments.slice(0, 3).map(el => (
-          <div key={el.node.title}> {createCardArgument(el)} </div>
+        {aArguments.slice(0, 3).map(oneArgument => (
+          <ArgumentItem
+            key={oneArgument.node.title}
+            title={oneArgument.node.title}
+            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+          />
         ))}
       </Col>
       <Col xs={{ order: 6 }} md={4}>
@@ -59,17 +33,35 @@ function Arguments(props) {
         </MainImage>
       </Col>
       <Col xs={{ order: 12 }} md={{ order: 12 }}>
+        {aArguments.slice(3, 6).map(oneArgument => (
+          <ArgumentItem
+            key={oneArgument.node.title}
+            title={oneArgument.node.title}
+            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+          />
+        ))}
+      </Col>
+      {/* <Col xs={{ order: 12 }} md={{ order: 12 }}>
+        {aArguments.slice(3, 6).map(oneArgument => (
+          <ArgumentItem
+            key={oneArgument.node.title}
+            title={oneArgument.node.title}
+            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+          />
+        ))}
+      </Col> */}
+      {/* <Col xs={{ order: 12 }} md={{ order: 12 }}>
         {aArguments.slice(3, 6).map(el => (
           <div key={el.node.title}> {createCardArgument(el)} </div>
         ))}
-      </Col>
+      </Col> */}
     </Row>
   )
 
   return <>{argumentsComponent}</>
 }
 
-export default Arguments
+export default ArgumentsList
 
 const useMediaImage = () => {
   const { allContentfulAsset } = useStaticQuery(

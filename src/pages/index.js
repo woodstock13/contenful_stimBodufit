@@ -4,8 +4,10 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainImage from "../components/mainImage"
-import Arguments from "../components/arguments"
+import ArgumentsList from "../components/argumentsList"
 import BlogList from "../components/blogList"
+import Title from "../components/Title"
+import ProcessusList from "../components/processusList"
 
 class HomePage extends React.Component {
   render() {
@@ -18,8 +20,15 @@ class HomePage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Electrofitness Marseille" />
         <MainImage location={this.props.location} />
-        <Arguments arguments={argumentsContent} />
+        <Title title={"Nos forces"} />
+        <ArgumentsList arguments={argumentsContent} />
+        <Title title={"Nos News"} />
         <BlogList posts={postsData} />
+        <Title title={"Notre Méthodologie"} />
+        <ProcessusList />
+        {/* <Title title={"Nos Coachs"} /> */}
+        {/* <Title title={"Nos Tarifs"} /> */}
+        {/* <Title title={"Nous Trouver"} /> */}
       </Layout>
     )
   }
