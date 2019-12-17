@@ -42,20 +42,6 @@ function ArgumentsList(props) {
           />
         ))}
       </Col>
-      {/* <Col xs={{ order: 12 }} md={{ order: 12 }}>
-        {aArguments.slice(3, 6).map(oneArgument => (
-          <ArgumentItem
-            key={oneArgument.node.title}
-            title={oneArgument.node.title}
-            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
-          />
-        ))}
-      </Col> */}
-      {/* <Col xs={{ order: 12 }} md={{ order: 12 }}>
-        {aArguments.slice(3, 6).map(el => (
-          <div key={el.node.title}> {createCardArgument(el)} </div>
-        ))}
-      </Col> */}
     </Row>
   )
 

@@ -22,7 +22,7 @@ function ProcessusList() {
     <Row>
       <br />
       {aProcessusItems.slice(nbBiguine, nbEnd).map(processusItem => (
-        <Col>
+        <Col key={processusItem.node.numroDansLordreDuProcessus}>
           <ProcessusItem
             key={processusItem.node.numroDansLordreDuProcessus}
             title={processusItem.node.titreDuProcessus}
