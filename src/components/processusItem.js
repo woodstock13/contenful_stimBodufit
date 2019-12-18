@@ -22,7 +22,7 @@ function ProcessusItem(props) {
         <h3>0{num}</h3>
         <span
           style={{
-            background: " #ff0000",
+            background: "#389FCD",
             position: "absolute",
             height: "1px",
             display: "block",

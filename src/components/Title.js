@@ -10,7 +10,7 @@ export default props => {
         <h3>{props.title}</h3>
         <span
           style={{
-            background: " #ff0000",
+            background: " #389FCD",
             position: "absolute",
             height: "2px",
             display: "block",

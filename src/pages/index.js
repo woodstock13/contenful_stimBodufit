@@ -68,6 +68,7 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          numIcon
           text {
             childMarkdownRemark {
               rawMarkdownBody

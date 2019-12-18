@@ -24,6 +24,7 @@ function ArgumentsList(props) {
             key={oneArgument.node.title}
             title={oneArgument.node.title}
             desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+            icon={oneArgument.node.numIcon}
           />
         ))}
       </Col>
@@ -39,6 +40,7 @@ function ArgumentsList(props) {
             key={oneArgument.node.title}
             title={oneArgument.node.title}
             desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+            icon={oneArgument.node.numIcon}
           />
         ))}
       </Col>

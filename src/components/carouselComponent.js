@@ -37,7 +37,6 @@ function CarousselComponent() {
   )
   // Data - attention reload à chaque tour du caroussel
   const data = allContentfulCoachBio.edges
-  console.log(data)
 
   //style
   const BioSide = styled.div`
@@ -61,7 +60,6 @@ function CarousselComponent() {
         let name = oneCoach.node.nomEtPrenom
         let title = oneCoach.node.titreBio
         let desc = oneCoach.node.desscription.childMarkdownRemark.html
-        console.log(desc)
         let insta = oneCoach.node.instagram
         let link = oneCoach.node.autreLienInternet
 

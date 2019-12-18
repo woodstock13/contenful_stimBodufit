@@ -1,5 +1,7 @@
 @import "../styles/global";
 
+//important ne pas effacer pour l'import global
+
 .row {
   text-align: center;
   padding: 5px;
@@ -27,39 +29,13 @@
   }
 }
 
-.button-icon {
-  @extend .button;
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.button-github {
-  @extend .button-icon;
-  background-image: url("../images/github.png");
-}
-
-.button-twitter {
-  @extend .button-icon;
-  background-image: url("../images/twitter.png");
-  margin-right: 0px;
-}
-
-.button-linkedin {
-  @extend .button-icon;
-  background-image: url("../images/linkedin.png");
-}
-.link {
-  color: red !important;
-}
 a {
-  color: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 17px;
   text-decoration: none;
 
   &:hover {
-    color: $color-pallete-2;
+    color: $color-pallete-1;
   }
 
   &:not(:last-child) {
