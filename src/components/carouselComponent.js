@@ -5,6 +5,8 @@ import styled from "styled-components"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Carousel, Row, Col } from "react-bootstrap"
+import Icon from "@mdi/react"
+import { mdiInstagram, mdiLinkVariant } from "@mdi/js"
 
 function CarousselComponent() {
   const { allContentfulCoachBio } = useStaticQuery(
@@ -88,13 +90,33 @@ function CarousselComponent() {
                       __html: desc,
                     }}
                   />
-                  <span>
-                    <Link>{insta}</Link>
-                  </span>
+                  {insta ? (
+                    <span>
+                      <a href={insta} target="_blank">
+                        <Icon
+                          path={mdiInstagram}
+                          title="insta"
+                          size={1}
+                          color="red"
+                        />
+                        {" " + insta}
+                      </a>
+                    </span>
+                  ) : null}
                   <br />
-                  <span>
-                    <Link>{link}</Link>
-                  </span>
+                  {link ? (
+                    <span>
+                      <a href={link} target="_blank">
+                        <Icon
+                          path={mdiLinkVariant}
+                          title="link"
+                          size={1}
+                          color="red"
+                        />
+                        {" " + link}
+                      </a>
+                    </span>
+                  ) : null}
                 </BioSide>
               </Col>
             </Row>

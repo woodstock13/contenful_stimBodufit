@@ -21,7 +21,7 @@ class HomePage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Electrofitness Marseille" />
         <MainImage location={this.props.location} />
-        <Title title={"Nos forces"} />
+        <Title title={"Nos Forces"} />
         <ArgumentsList arguments={argumentsContent} />
         <Title title={"Nos News"} />
         <BlogList posts={postsData} />
@@ -29,8 +29,8 @@ class HomePage extends React.Component {
         <ProcessusList />
         <Title title={"Nos Coachs"} />
         <CarouselComponent />
-        {/* <Title title={"Nos Tarifs"} /> */}
-        {/* <Title title={"Nous Trouver"} /> */}
+        <Title title={"Nos Tarifs"} />
+        <Title title={"Nous Trouver"} />
       </Layout>
     )
   }
