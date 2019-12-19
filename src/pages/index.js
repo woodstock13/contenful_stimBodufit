@@ -22,7 +22,7 @@ class HomePage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Electrofitness Marseille" />
         <MainImage location={this.props.location} />
-        <Container style={{ background_color: "red" }}>
+        <Container>
           <Title title={"Nos Forces"} />
           <ArgumentsList arguments={argumentsContent} />
           <Title title={"Nos News"} />

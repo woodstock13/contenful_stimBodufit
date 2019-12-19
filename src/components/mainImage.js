@@ -3,6 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 import { Card, Container } from "react-bootstrap"
 import ImageHomePage from "../images/coverHomePage.jpg"
+import ImageTechnoPage from "../images/coverTechno.jpg"
+import ImagePricePage from "../images/coverPrice.jpg"
+import ImageCalendarPage from "../images/coverPlaning.jpg"
 //Set gatsby assets
 function selectedCoverImageByPath(path) {
   let aTmp = []
@@ -13,15 +16,15 @@ function selectedCoverImageByPath(path) {
       aTmp.push("Electrofitness Marseille")
       return aTmp
     case "/technologyPage":
-      aTmp.push("src/images/coverHomePage.jpg")
+      aTmp.push(ImageTechnoPage)
       aTmp.push("Nos Technologies")
       return aTmp
     case "/pricePage":
-      aTmp.push("src/images/coverHomePage.jpg")
+      aTmp.push(ImagePricePage)
       aTmp.push("Nos Tarifs")
       return aTmp
     case "/contactPage":
-      aTmp.push("src/images/coverHomePage.jpg")
+      aTmp.push(ImageCalendarPage)
       aTmp.push("Nous Contacter")
       aTmp.push("Electrofitness Marseille")
       return aTmp
@@ -64,32 +67,34 @@ function MainImage(props) {
       </Container>
     )
   } else {
+    //Pages principales
     let dataImage = selectedCoverImageByPath(currentPath)
     let srcImage = dataImage[0]
     let textImage = dataImage[1]
     let suTextImage = dataImage[2] || null
-    console.log(dataImage)
-    //else page:
     bannerImage = (
       <>
         <Card
           className="bg-dark text-white"
-          style={{ position: "inherit", maxHeight: "550px" }}
+          style={{
+            position: "inherit",
+            maxHeight: "550px",
+            textAlign: "center",
+          }}
         >
           <Card.Img
             alt={textImage}
             src={srcImage}
             style={{
-              backgroundAttachment: "fixed",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
+              filter: "grayscale(100%)",
             }}
           />
-          <Card.ImgOverlay>
-            <Card.Title>{textImage}</Card.Title>
-            <Card.Text>{suTextImage}</Card.Text>
-            <Card.Text>Last updated 3 mins ago</Card.Text>
+          <Card.ImgOverlay style={{ paddingTop: "20%" }}>
+            <Card.Title>
+              <h1>{textImage}</h1>
+            </Card.Title>
+            <h5>{suTextImage}</h5>
+            <Card.Text>---</Card.Text>
           </Card.ImgOverlay>
         </Card>
         <div

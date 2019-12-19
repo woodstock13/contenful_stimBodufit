@@ -9,11 +9,9 @@ export default props => (
   <Layout location={props.location}>
     <SEO title="Nos Prix" />
     <MainImage location={props.location} />
-    <Container>
-      <div>
-        <h1>Nos Prix</h1>
-        <p>Lorem ipsum...</p>
-      </div>
+    <Container style={{ margin: "0 auto", position: "relative" }}>
+      <h1>Nos Prix</h1>
+      <p>Lorem ipsum...</p>
     </Container>
   </Layout>
 )
