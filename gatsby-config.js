@@ -1,7 +1,11 @@
-const dotenv = require("dotenv")
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
-if (process.env.NODE_ENV !== "production") {
-  dotenv.config()
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  host: process.env.CONTENTFUL_HOST,
 }
 
 module.exports = {
@@ -60,26 +64,13 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
-      },
-    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `bx6q22exbt3e`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        spaceId: contentfulConfig.spaceId,
+        accessToken: contentfulConfig.accessToken,
       },
     },
     "@contentful/gatsby-transformer-contentful-richtext",
