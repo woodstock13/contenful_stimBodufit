@@ -9,6 +9,7 @@ import BlogList from "../components/blogList"
 import Title from "../components/Title"
 import ProcessusList from "../components/processusList"
 import CarouselComponent from "../components/carouselComponent"
+import { Container } from "react-bootstrap"
 
 class HomePage extends React.Component {
   render() {
@@ -21,16 +22,18 @@ class HomePage extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Electrofitness Marseille" />
         <MainImage location={this.props.location} />
-        <Title title={"Nos Forces"} />
-        <ArgumentsList arguments={argumentsContent} />
-        <Title title={"Nos News"} />
-        <BlogList posts={postsData} />
-        <Title title={"Notre Méthodologie"} />
-        <ProcessusList />
-        <Title title={"Nos Coachs"} />
-        <CarouselComponent />
-        <Title title={"Nos Tarifs"} />
-        <Title title={"Nous Trouver"} />
+        <Container style={{ background_color: "red" }}>
+          <Title title={"Nos Forces"} />
+          <ArgumentsList arguments={argumentsContent} />
+          <Title title={"Nos News"} />
+          <BlogList posts={postsData} />
+          <Title title={"Notre Méthodologie"} />
+          <ProcessusList />
+          <Title title={"Nos Coachs"} />
+          <CarouselComponent />
+          <Title title={"Nos Tarifs"} />
+          <Title title={"Nous Trouver"} />
+        </Container>
       </Layout>
     )
   }

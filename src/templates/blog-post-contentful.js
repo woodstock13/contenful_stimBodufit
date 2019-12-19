@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainImage from "../components/mainImage"
+import { Container } from "react-bootstrap"
 
 class BlogPostContentfulTemplate extends React.Component {
   render() {
@@ -16,60 +17,58 @@ class BlogPostContentfulTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.title} description={post.title} />
-        <MainImage location={this.props.location} />
-        {/* <Img fluid={post.image.fluid}></Img> */}
-        <article>
-          <header>
-            <h1
-              style={{
-                marginBottom: 0,
+        <MainImage
+          location={this.props.location}
+          title={post.title}
+          image={post.image.fluid.src}
+        />
+        <Container>
+          <article>
+            <header>
+              <p
+                style={{
+                  display: `block`,
+                }}
+              >
+                {post.date}
+              </p>
+            </header>
+            <section
+              dangerouslySetInnerHTML={{
+                __html: post.content.childContentfulRichText.html,
               }}
-            >
-              {post.title}
-            </h1>
-            <p
-              style={{
-                display: `block`,
-              }}
-            >
-              {post.date}
-            </p>
-          </header>
-          <section
-            dangerouslySetInnerHTML={{
-              __html: post.content.childContentfulRichText.html,
-            }}
-          />
-          <hr />
-          <footer>{/* TODO */}</footer>
-        </article>
+            />
+            <hr />
+            <footer>{/* TODO */}</footer>
+          </article>
 
-        <nav>
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={"blog/" + previous.slug} rel="prev">
-                  ← {previous.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={"blog/" + next.slug} rel="next">
-                  {next.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
+          <nav>
+            <ul
+              style={{
+                display: `flex`,
+                flexWrap: `wrap`,
+                justifyContent: `space-between`,
+                listStyle: `none`,
+                padding: 0,
+              }}
+            >
+              <li>
+                {previous && (
+                  <Link to={"blog/" + previous.slug} rel="prev">
+                    ← {previous.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={"blog/" + next.slug} rel="next">
+                    {next.title} →
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </nav>
+        </Container>
       </Layout>
     )
   }
@@ -93,7 +92,7 @@ export const pageQuery = graphql`
       }
       image {
         fluid {
-          ...GatsbyContentfulFluid
+          src
         }
       }
     }

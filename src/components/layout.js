@@ -25,7 +25,7 @@ class Layout extends React.Component {
 
     let header = (
       <div>
-        <Navbar bg="light" collapseOnSelect expand="lg">
+        <Navbar collapseOnSelect bg="light" fixed="top" expand="lg">
           <Link to="/" className="link-no-style">
             <Navbar.Brand as="span">{title || "StimbodyFit"}</Navbar.Brand>
           </Link>
@@ -72,7 +72,7 @@ class Layout extends React.Component {
     return (
       <div>
         <header>{header}</header>
-        <Container>{children}</Container>
+        <>{children}</>
         <footer>{footer}</footer>
       </div>
     )
