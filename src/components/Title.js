@@ -12,7 +12,7 @@ export default props => {
         <span
           style={{
             margin: "auto",
-            background: " #389FCD",
+            background: "#389FCD",
             inlineSize: "auto",
             height: "2px",
             display: "block",
