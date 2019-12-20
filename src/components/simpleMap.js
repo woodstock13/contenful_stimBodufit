@@ -26,7 +26,7 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
         >
           <MapPin
-            color={"#389FCD"}
+            color={"#007bff"}
             lat={43.2890048}
             lng={5.3941924}
             text={"StimBodyFit"}

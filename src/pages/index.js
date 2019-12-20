@@ -33,7 +33,7 @@ class HomePage extends React.Component {
           <ProcessusList />
           <Title title={"Nos Coachs"} />
           <CarouselComponent />
-          <Title title={"Nos Tarifs"} />
+          {/* <Title title={"Nos Tarifs"} /> */}
           <Title title={"Nous Trouver"} />
           <Row>
             <Col>

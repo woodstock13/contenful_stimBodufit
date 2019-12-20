@@ -68,7 +68,7 @@ function MainImage(props) {
     )
   } else {
     //Pages principales
-    //TODO modifier le witch par un Hooks de type reducer
+    //TODO modifier le switch par un Hooks de type reducer
     let dataImage = selectedCoverImageByPath(currentPath)
     let srcImage = dataImage[0]
     let textImage = dataImage[1]

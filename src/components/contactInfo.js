@@ -1,37 +1,55 @@
 import React from "react"
+import { useStaticQuery } from "gatsby"
 import { MapPin, Smartphone, Mail } from "react-feather"
 
+import "./contact.css"
 function ContactInfo() {
+  const { allContentfulContactInfo } = useStaticQuery(
+    graphql`
+      query {
+        allContentfulContactInfo {
+          edges {
+            node {
+              mailContact
+              telephoneInfo
+              adresse
+            }
+          }
+        }
+      }
+    `
+  )
+  const data = allContentfulContactInfo.edges[0].node
+  const adresse = data.adresse
+  const phone = data.telephoneInfo
+  const email = data.mailContact
+
   return (
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
-        <div>
-          <p>Merci de votre confiance !</p>
+        <div className="Contact" style={{ fontSize: "1.6em" }}>
           <div className="Contact--Details">
-            {/* {address && (
+            {adresse && (
               <a
                 className="Contact--Details--Item"
                 href={`https://www.google.com.au/maps/search/${encodeURI(
-                  address
+                  adresse
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-              > */}
-            <a className="Contact--Details--Item">
-              <MapPin /> adresse
-            </a>
+              >
+                <MapPin /> {adresse}
+              </a>
             )}
-            {/* {phone && (
-              <a className="Contact--Details--Item" href={`tel:${phone}`}> */}
-            <a className="Contact--Details--Item">
-              <Smartphone /> phone
-            </a>
+            {phone && (
+              <a className="Contact--Details--Item" href={`tel:${phone}`}>
+                <Smartphone /> {phone}
+              </a>
             )}
-            {/* {email && (
-              <a className="Contact--Details--Item" href={`mailto:${email}`}> */}
-            <a className="Contact--Details--Item">
-              <Mail /> example@example.com
-            </a>
+            {email && (
+              <a className="Contact--Details--Item" href={`mailto:${email}`}>
+                <Mail /> {email}
+              </a>
             )}
           </div>
         </div>

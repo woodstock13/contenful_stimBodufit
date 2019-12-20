@@ -1,11 +1,13 @@
 .Contact {
+  margin: 0 auto;
 }
 
-.Contact--Details {
+.ContactDetails {
   margin-top: 3rem;
 }
 
 .Contact--Details--Item {
+  font-size: 0.7em;
   display: flex;
   padding: 2rem 0;
   border-top: 1px solid var(--lightGrey);
