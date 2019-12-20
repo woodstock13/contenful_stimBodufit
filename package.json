@@ -44,6 +44,7 @@
     "react-dom": "^16.12.0",
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
+    "react-mailchimp-form": "^1.0.2",
     "react-material-icon-svg": "^3.6.0",
     "sitb-react-icon": "^1.0.3",
     "styled-components": "^4.4.1",

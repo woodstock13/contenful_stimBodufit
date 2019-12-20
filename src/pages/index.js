@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -11,6 +11,7 @@ import Title from "../components/Title"
 import ProcessusList from "../components/processusList"
 import CarouselComponent from "../components/carouselComponent"
 import SimpleMap from "../components/simpleMap"
+import ContactInfo from "../components/contactInfo"
 
 class HomePage extends React.Component {
   render() {
@@ -34,7 +35,14 @@ class HomePage extends React.Component {
           <CarouselComponent />
           <Title title={"Nos Tarifs"} />
           <Title title={"Nous Trouver"} />
-          <SimpleMap />
+          <Row>
+            <Col>
+              <ContactInfo />
+            </Col>
+            <Col>
+              <SimpleMap />
+            </Col>
+          </Row>
         </Container>
       </Layout>
     )

@@ -1,13 +1,12 @@
 import React from "react"
 import { MapPin, Smartphone, Mail } from "react-feather"
 
-import FormSimpleAjax from "../components/formSimpleAjax"
-
-function ContactForm() {
+function ContactInfo() {
   return (
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
         <div>
+          <p>Merci de votre confiance !</p>
           <div className="Contact--Details">
             {/* {address && (
               <a
@@ -36,13 +35,9 @@ function ContactForm() {
             )}
           </div>
         </div>
-
-        <div>
-          <FormSimpleAjax name="Simple Form Ajax" />
-        </div>
       </div>
     </section>
   )
 }
 
-export default ContactForm
+export default ContactInfo

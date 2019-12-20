@@ -68,6 +68,7 @@ function MainImage(props) {
     )
   } else {
     //Pages principales
+    //TODO modifier le witch par un Hooks de type reducer
     let dataImage = selectedCoverImageByPath(currentPath)
     let srcImage = dataImage[0]
     let textImage = dataImage[1]
@@ -100,7 +101,7 @@ function MainImage(props) {
         <div
           style={{
             position: "absolute",
-            height: "1000px",
+            height: "750px",
             backgroundColor: "white",
             inlineSize: "-webkit-fill-available",
           }}
