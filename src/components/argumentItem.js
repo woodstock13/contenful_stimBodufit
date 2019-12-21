@@ -28,11 +28,20 @@ function ArgumentItem(props) {
   const icon = icons[props.icon]
   return (
     <Media>
+      <Icon path={icon} title="icon" size={2} color="#389FCD" />
       <Media.Body>
         <h5>{title}</h5>
-        <p>{description}</p>
+        <p
+          style={{
+            maxWidth: "200px",
+            maxHeight: "7.4em",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
+        >
+          {description}
+        </p>
       </Media.Body>
-      <Icon path={icon} title="icon" size={2} color="#389FCD" />
     </Media>
   )
 }

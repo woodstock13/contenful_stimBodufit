@@ -1,6 +1,11 @@
 import React from "react"
 import { useStaticQuery } from "gatsby"
-import { MapPin, Smartphone, Mail } from "react-feather"
+import Icon from "@mdi/react"
+import {
+  mdiHomeCityOutline,
+  mdiPhoneForwardOutline,
+  mdiEmailSendOutline,
+} from "@mdi/js"
 
 import "./contact.css"
 function ContactInfo() {
@@ -26,29 +31,55 @@ function ContactInfo() {
 
   return (
     <section className="section Contact--Section1">
-      <div className="container Contact--Section1--Container">
-        <div className="Contact" style={{ fontSize: "1.6em" }}>
-          <div className="Contact--Details">
+      <div>
+        <div
+          className="Contact"
+          style={{ fontSize: "1.6em", textAlign: "left", padding: "0.4em" }}
+        >
+          <div style={{ padding: "1em" }}>
             {adresse && (
               <a
-                className="Contact--Details--Item"
                 href={`https://www.google.com.au/maps/search/${encodeURI(
                   adresse
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MapPin /> {adresse}
+                <Icon
+                  path={mdiHomeCityOutline}
+                  title="insta"
+                  size={2}
+                  color="#285569"
+                />{" "}
+                {adresse}
               </a>
             )}
+          </div>
+          <div style={{ padding: "1em" }}>
             {phone && (
-              <a className="Contact--Details--Item" href={`tel:${phone}`}>
-                <Smartphone /> {phone}
+              <a href={`tel:${phone}`}>
+                <Icon
+                  path={mdiPhoneForwardOutline}
+                  title="insta"
+                  size={2}
+                  color="#285569"
+                />{" "}
+                {phone}
               </a>
             )}
+          </div>
+          <div style={{ padding: "1em" }}>
             {email && (
-              <a className="Contact--Details--Item" href={`mailto:${email}`}>
-                <Mail /> {email}
+              <a
+                href={`mailto:${email}?subject=Contact%20direct%20site%20StimbodyFit`}
+              >
+                <Icon
+                  path={mdiEmailSendOutline}
+                  title="insta"
+                  size={2}
+                  color="#285569"
+                />{" "}
+                {email}
               </a>
             )}
           </div>

@@ -18,7 +18,12 @@ function ArgumentsList(props) {
 
   argumentsComponent = (
     <Row>
-      <Col xs={{ order: 1 }} md={{ order: 1 }}>
+      <Col xs={{ order: 1 }} md={6}>
+        <MainImage>
+          <Img fluid={fluid} />
+        </MainImage>
+      </Col>
+      <Col xs={{ order: 10 }} md={3}>
         {aArguments.slice(0, 3).map(oneArgument => (
           <ArgumentItem
             key={oneArgument.node.title}
@@ -28,13 +33,7 @@ function ArgumentsList(props) {
           />
         ))}
       </Col>
-      {/* TODO: Rework 3 col */}
-      <Col xs={{ order: 6 }} md={4}>
-        <MainImage>
-          <Img fluid={fluid} />
-        </MainImage>
-      </Col>
-      <Col xs={{ order: 12 }} md={{ order: 12 }}>
+      <Col xs={{ order: 12 }} md={3}>
         {aArguments.slice(3, 6).map(oneArgument => (
           <ArgumentItem
             key={oneArgument.node.title}
