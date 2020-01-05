@@ -1,7 +1,6 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Row } from "react-bootstrap"
-import { mdiAndroidAuto } from "@mdi/js"
 
 export default props => {
   return (

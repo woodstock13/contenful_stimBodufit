@@ -7,7 +7,7 @@ class FormMailChimp extends Component {
     return (
       // NOTABENE: faire matché pour chaque field avec mailchimp les : Audience fields and *|MERGE|* tags
       <Mailchimp
-        action="https://gmail.us4.list-manage.com/subscribe/post?u=9f2a6edeeae87c1b235c241fb&amp;id=be068ceb01"
+        action="https://hotmail.us4.list-manage.com/subscribe/post?u=64b5b1cf938c2beeb90467cfc&amp;id=2dcb8d1705"
         fields={[
           {
             name: "NAMES",
@@ -24,7 +24,7 @@ class FormMailChimp extends Component {
           {
             name: "PHONE",
             placeholder: "Téléphone",
-            type: "phone",
+            type: "number",
             required: true,
           },
         ]}

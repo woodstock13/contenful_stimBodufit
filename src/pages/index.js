@@ -39,9 +39,7 @@ class HomePage extends React.Component {
             <Col>
               <ContactInfo />
             </Col>
-            <Col>
-              <SimpleMap />
-            </Col>
+            <Col>{/* <SimpleMap /> */}</Col>
           </Row>
         </Container>
       </Layout>

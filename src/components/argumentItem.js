@@ -15,6 +15,7 @@ import {
 function ArgumentItem(props) {
   const title = props.title
   const description = props.desc
+  const isPositionLeft = props.position === "left" ? true : false
 
   //tableau numéroté pour l'import des icons via contentful
   const icons = [
@@ -26,24 +27,47 @@ function ArgumentItem(props) {
     mdiBullseyeArrow,
   ]
   const icon = icons[props.icon]
-  return (
-    <Media>
-      <Icon path={icon} title="icon" size={2} color="#389FCD" />
-      <Media.Body>
-        <h5>{title}</h5>
-        <p
-          style={{
-            maxWidth: "200px",
-            maxHeight: "7.4em",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {description}
-        </p>
-      </Media.Body>
-    </Media>
-  )
+  if (isPositionLeft) {
+    return (
+      <Media>
+        <Icon path={icon} title="icon" size={2} color="#389FCD" />
+        <Media.Body>
+          <h5>{title}</h5>
+          <p
+            style={{
+              textAlign: "-webkit-center",
+              marginLeft: "-4em",
+              maxHeight: "9.3em",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {description}
+          </p>
+        </Media.Body>
+      </Media>
+    )
+  } else {
+    return (
+      <Media>
+        <Media.Body>
+          <h5>{title}</h5>
+          <p
+            style={{
+              textAlign: "-webkit-center",
+              marginLeft: "-4em",
+              maxHeight: "9.3em",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {description}
+          </p>
+        </Media.Body>
+        <Icon path={icon} title="icon" size={2} color="#389FCD" />
+      </Media>
+    )
+  }
 }
 
 export default ArgumentItem

@@ -12,31 +12,28 @@ function ArgumentsList(props) {
   let argumentsComponent
 
   const MainImage = styled.div`
-    flex: 100%;
+    flex: 150%;
     margin-right: 1rem;
   `
+  const WhiteBlock = styled.div`
+    display: block;
+    height: 70px;
+    padding: 5px;
+  `
 
-  argumentsComponent = (
+  console.log(window.screen.width)
+
+  const argumentsResponsiveComponent = (
     <Row>
-      <Col xs={{ order: 1 }} md={6}>
-        <MainImage>
-          <Img fluid={fluid} />
-        </MainImage>
-      </Col>
-      <Col xs={{ order: 10 }} md={3}>
-        {aArguments.slice(0, 3).map(oneArgument => (
+      <MainImage>
+        <Img fluid={fluid} />
+      </MainImage>
+      <Col style={{ textAlign: "-webkit-center" }}>
+        {aArguments.slice(0, 6).map(oneArgument => (
           <ArgumentItem
+            style={{ textAlign: "center" }}
             key={oneArgument.node.title}
-            title={oneArgument.node.title}
-            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
-            icon={oneArgument.node.numIcon}
-          />
-        ))}
-      </Col>
-      <Col xs={{ order: 12 }} md={3}>
-        {aArguments.slice(3, 6).map(oneArgument => (
-          <ArgumentItem
-            key={oneArgument.node.title}
+            position="left"
             title={oneArgument.node.title}
             desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
             icon={oneArgument.node.numIcon}
@@ -45,8 +42,45 @@ function ArgumentsList(props) {
       </Col>
     </Row>
   )
-
-  return <>{argumentsComponent}</>
+  argumentsComponent = (
+    <Row>
+      <Col xs={{ order: 6 }} md={6}>
+        <WhiteBlock />
+        <MainImage>
+          <Img fluid={fluid} />
+        </MainImage>
+        <WhiteBlock />
+      </Col>
+      <Col xs={{ order: 1 }} md={3} style={{ textAlign: "right" }}>
+        {aArguments.slice(0, 3).map(oneArgument => (
+          <ArgumentItem
+            key={oneArgument.node.title}
+            position="right"
+            title={oneArgument.node.title}
+            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+            icon={oneArgument.node.numIcon}
+          />
+        ))}
+      </Col>
+      <Col xs={{ order: 12 }} md={3} style={{ textAlign: "-webkit-center" }}>
+        {aArguments.slice(3, 6).map(oneArgument => (
+          <ArgumentItem
+            style={{ textAlign: "left" }}
+            key={oneArgument.node.title}
+            position="left"
+            title={oneArgument.node.title}
+            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
+            icon={oneArgument.node.numIcon}
+          />
+        ))}
+      </Col>
+    </Row>
+  )
+  if (window.screen.width > 1000) {
+    return <>{argumentsComponent}</>
+  } else {
+    return <>{argumentsResponsiveComponent}</>
+  }
 }
 
 export default ArgumentsList

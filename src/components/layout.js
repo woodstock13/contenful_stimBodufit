@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
-import styles from "./layout.scss"
+import styles from "./layout.scss" //DO NOT REMOVE THIS LINE
 
 import { ButtonGroup, Navbar, Container, Nav, Col, Row } from "react-bootstrap"
 import Icon from "@mdi/react"

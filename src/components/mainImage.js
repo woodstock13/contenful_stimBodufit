@@ -101,7 +101,7 @@ function MainImage(props) {
         <div
           style={{
             position: "absolute",
-            height: "750px",
+            height: "840px",
             backgroundColor: "white",
             inlineSize: "-webkit-fill-available",
           }}
