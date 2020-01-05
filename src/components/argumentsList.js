@@ -20,26 +20,6 @@ function ArgumentsList(props) {
     height: 70px;
     padding: 5px;
   `
-
-  const argumentsResponsiveComponent = (
-    <Row>
-      <MainImage>
-        <Img fluid={fluid} />
-      </MainImage>
-      <Col style={{ textAlign: "-webkit-center" }}>
-        {aArguments.slice(0, 6).map(oneArgument => (
-          <ArgumentItem
-            style={{ textAlign: "center" }}
-            key={oneArgument.node.title}
-            position="left"
-            title={oneArgument.node.title}
-            desc={oneArgument.node.text.childMarkdownRemark.rawMarkdownBody}
-            icon={oneArgument.node.numIcon}
-          />
-        ))}
-      </Col>
-    </Row>
-  )
   argumentsComponent = (
     <Row>
       <Col xs={{ order: 6 }} md={6}>
@@ -74,11 +54,11 @@ function ArgumentsList(props) {
       </Col>
     </Row>
   )
-  if (window.screen.width > 1000) {
-    return <>{argumentsComponent}</>
-  } else {
-    return <>{argumentsResponsiveComponent}</>
-  }
+  return <>{argumentsComponent}</>
+  // if (window.screen.width > 1000) {
+  // } else {
+  //   return <>{argumentsResponsiveComponent}</>
+  // }
 }
 
 export default ArgumentsList
