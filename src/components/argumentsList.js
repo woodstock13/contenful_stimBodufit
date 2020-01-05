@@ -21,8 +21,6 @@ function ArgumentsList(props) {
     padding: 5px;
   `
 
-  console.log(window.screen.width)
-
   const argumentsResponsiveComponent = (
     <Row>
       <MainImage>
