@@ -9,6 +9,7 @@ import ArgumentsList from "../components/argumentsList"
 import BlogList from "../components/blogList"
 import Title from "../components/Title"
 import ProcessusList from "../components/processusList"
+import PriceLandingPage from "../components/priceLandingComponent"
 import CarouselComponent from "../components/carouselComponent"
 import SimpleMap from "../components/simpleMap"
 import ContactInfo from "../components/contactInfo"
@@ -34,10 +35,11 @@ class HomePage extends React.Component {
           <Title title={"Nos Coachs"} />
           <CarouselComponent />
           {/* <Title title={"Nos Tarifs"} /> */}
+          <PriceLandingPage />
           <Title title={"Nous Trouver"} />
           <Row>
             <Col>
-              <ContactInfo />
+              <ContactInfo location={this.props.location} />
             </Col>
             <Col>{/* <SimpleMap /> */}</Col>
           </Row>

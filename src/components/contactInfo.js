@@ -1,14 +1,15 @@
 import React from "react"
-import { useStaticQuery } from "gatsby"
+import { useStaticQuery, Link } from "gatsby"
 import Icon from "@mdi/react"
 import {
   mdiHomeCityOutline,
   mdiPhoneForwardOutline,
   mdiEmailSendOutline,
 } from "@mdi/js"
-
 import "./contact.css"
-function ContactInfo() {
+import { Button } from "react-bootstrap"
+
+function ContactInfo(props) {
   const { allContentfulContactInfo } = useStaticQuery(
     graphql`
       query {
@@ -24,6 +25,7 @@ function ContactInfo() {
       }
     `
   )
+  const currentPath = props.location.pathname
   const data = allContentfulContactInfo.edges[0].node
   const adresse = data.adresse
   const phone = data.telephoneInfo
@@ -32,6 +34,9 @@ function ContactInfo() {
   return (
     <section className="section Contact--Section1">
       <div>
+        <h5>
+          <i>Vous pouvez nous contacter directement ici : </i>
+        </h5>
         <div
           className="Contact"
           style={{ fontSize: "1.6em", textAlign: "left", padding: "0.4em" }}
@@ -83,6 +88,11 @@ function ContactInfo() {
               </a>
             )}
           </div>
+          {currentPath === "/" ? (
+            <Link style={{ boxShadow: `none` }} to={"contactPage"}>
+              <Button variant="outline-danger">Prendre Rendez-vous !</Button>
+            </Link>
+          ) : null}
         </div>
       </div>
     </section>

@@ -30,12 +30,20 @@ function ArgumentItem(props) {
   if (isPositionLeft) {
     return (
       <Media>
-        <Icon path={icon} title="icon" size={2} color="#389FCD" />
+        <Icon
+          path={icon}
+          title="icon"
+          size={2}
+          color="#389FCD"
+          style={{
+            paddingRight: "5px",
+          }}
+        />
         <Media.Body>
           <h5>{title}</h5>
           <p
             style={{
-              textAlign: "-webkit-center",
+              textAlign: "-webkit-auto",
               marginLeft: "-4em",
               maxHeight: "9.3em",
               overflow: "hidden",
@@ -54,8 +62,8 @@ function ArgumentItem(props) {
           <h5>{title}</h5>
           <p
             style={{
-              textAlign: "-webkit-center",
-              marginLeft: "-4em",
+              textAlign: "-webkit-right",
+              marginLeft: "-2em",
               maxHeight: "9.3em",
               overflow: "hidden",
               textOverflow: "ellipsis",
@@ -64,7 +72,15 @@ function ArgumentItem(props) {
             {description}
           </p>
         </Media.Body>
-        <Icon path={icon} title="icon" size={2} color="#389FCD" />
+        <Icon
+          path={icon}
+          title="icon"
+          size={2}
+          color="#389FCD"
+          style={{
+            paddingLeft: "5px",
+          }}
+        />
       </Media>
     )
   }

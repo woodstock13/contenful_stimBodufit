@@ -40,10 +40,9 @@ function ArgumentsList(props) {
           />
         ))}
       </Col>
-      <Col xs={{ order: 12 }} md={3} style={{ textAlign: "-webkit-center" }}>
+      <Col xs={{ order: 12 }} md={3} style={{ textAlign: "left" }}>
         {aArguments.slice(3, 6).map(oneArgument => (
           <ArgumentItem
-            style={{ textAlign: "left" }}
             key={oneArgument.node.title}
             position="left"
             title={oneArgument.node.title}
