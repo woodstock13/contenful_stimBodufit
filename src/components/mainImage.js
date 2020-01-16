@@ -1,6 +1,5 @@
 import React from "react"
 import "bootstrap/dist/css/bootstrap.min.css"
-
 import { Card, Container } from "react-bootstrap"
 import ImageHomePage from "../images/coverHomePage.jpg"
 import ImageTechnoPage from "../images/coverTechno.jpg"
@@ -30,9 +29,7 @@ function selectedCoverImageByPath(path) {
       return aTmp
 
     default:
-      aTmp.push("src/images/coverHomePage.jpg")
-      aTmp.push("StimbodyFit")
-      aTmp.push("Electrofitness Marseille")
+      aTmp.push(ImageHomePage)
       return aTmp
   }
 }
@@ -69,10 +66,11 @@ function MainImage(props) {
   } else {
     //Pages principales
     //TODO modifier le switch par un Hooks de type reducer
-    let dataImage = selectedCoverImageByPath(currentPath)
+    const dataImage = selectedCoverImageByPath(currentPath)
     let srcImage = dataImage[0]
     let textImage = dataImage[1]
-    let suTextImage = dataImage[2] || null
+    let subTextImage = dataImage[2] || null
+
     bannerImage = (
       <>
         <Card
@@ -83,18 +81,12 @@ function MainImage(props) {
             textAlign: "center",
           }}
         >
-          <Card.Img
-            alt={textImage}
-            src={srcImage}
-            // style={{
-            //   filter: "grayscale(100%)",
-            // }}
-          />
+          <Card.Img alt={textImage} src={srcImage}></Card.Img>
           <Card.ImgOverlay style={{ paddingTop: "20%" }}>
             <Card.Title>
               <h1>{textImage}</h1>
             </Card.Title>
-            <h5>{suTextImage}</h5>
+            <h5>{subTextImage}</h5>
             <Card.Text>---</Card.Text>
           </Card.ImgOverlay>
         </Card>

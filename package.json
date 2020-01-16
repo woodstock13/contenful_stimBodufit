@@ -1,9 +1,9 @@
 {
   "name": "stimbodyfit",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "From a starter for a blog powered by Gatsby and Markdown",
+  "version": "1.0.1",
+  "author": "woodstock13",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -19,7 +19,7 @@
     "gatsby-image": "^2.2.34",
     "gatsby-plugin-feed": "^2.3.23",
     "gatsby-plugin-google-analytics": "^2.1.29",
-    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-manifest": "^2.2.37",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
     "gatsby-plugin-sass": "^2.1.26",

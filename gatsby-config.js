@@ -12,10 +12,11 @@ module.exports = {
   siteMetadata: {
     title: `Stimbodyfit`,
     author: "woodstock13",
-    description: `La solution Electrofitness sur Marseille`,
+    description: `La solution Electrofitness sur Marseille `,
     siteUrl: `https://stimbodyfit.fr/`,
     social: {
-      twitter: `Stimbodyfit`,
+      facebook: `body fit`,
+      instagram: `Stimbodyfit`,
     },
   },
   plugins: [
@@ -32,6 +33,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        display: "standalone",
+        icon: "src/images/favicon.png",
       },
     },
     {
