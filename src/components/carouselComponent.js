@@ -70,9 +70,8 @@ function CarousselComponent() {
                 <div
                   style={{
                     margin: "0 auto",
-                    background: "white",
-                    width: "430px",
-                    height: "650px",
+                    display: "block",
+                    width: "30vw",
                   }}
                 >
                   <Img fluid={coachImage} alt={name} />

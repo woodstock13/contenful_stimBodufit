@@ -13,10 +13,10 @@ class Layout extends React.Component {
     let socialButtonGroup = (
       <ButtonGroup>
         <div>
-          <a href="https://instagram.com" target="_blank">
-            <Icon path={mdiInstagram} title="insta" size={1} color="#F9A825" />
+          <a href="https://www.instagram.com/stimbodyfit/" target="_blank">
+            <Icon path={mdiInstagram} title="insta" size={1} color="red" />
           </a>
-          <a href="https://facebook.com" target="_blank">
+          <a href="https://www.facebook.com/body.fit.982" target="_blank">
             <Icon path={mdiFacebookBox} title="fb" size={1} color="#1565C0" />
           </a>
         </div>

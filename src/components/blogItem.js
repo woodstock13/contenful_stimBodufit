@@ -10,7 +10,7 @@ function BlogItem(props) {
   const description = data.description.childMarkdownRemark.rawMarkdownBody
   return (
     <Col>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "21rem" }}>
         <div>
           <Link style={{ boxShadow: `none` }} to={"/blog/" + data.slug}>
             <Card.Img variant="top" src={data.image.fluid.src} />

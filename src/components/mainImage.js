@@ -86,9 +86,9 @@ function MainImage(props) {
           <Card.Img
             alt={textImage}
             src={srcImage}
-            style={{
-              filter: "grayscale(100%)",
-            }}
+            // style={{
+            //   filter: "grayscale(100%)",
+            // }}
           />
           <Card.ImgOverlay style={{ paddingTop: "20%" }}>
             <Card.Title>

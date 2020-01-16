@@ -44,8 +44,7 @@ function ArgumentItem(props) {
           <p
             style={{
               textAlign: "-webkit-auto",
-              marginLeft: "-4em",
-              maxHeight: "9.3em",
+              maxHeight: "10.3em",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
@@ -64,7 +63,7 @@ function ArgumentItem(props) {
             style={{
               textAlign: "-webkit-right",
               marginLeft: "-2em",
-              maxHeight: "9.3em",
+              maxHeight: "10.3em",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}

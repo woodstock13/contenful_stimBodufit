@@ -45,13 +45,11 @@ function GetRichText(props) {
   const data = getPath === "/pricePage" ? PriceText : TechText
 
   let displayRichText = (
-    <Row>
-      <section
-        dangerouslySetInnerHTML={{
-          __html: data,
-        }}
-      />
-    </Row>
+    <Row
+      dangerouslySetInnerHTML={{
+        __html: data,
+      }}
+    ></Row>
   )
 
   return <>{displayRichText}</>
