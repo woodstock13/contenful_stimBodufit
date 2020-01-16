@@ -3,13 +3,13 @@ import { Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
 import styles from "./layout.scss" //DO NOT REMOVE THIS LINE
 
-import { ButtonGroup, Navbar, Container, Nav, Col, Row } from "react-bootstrap"
+import { ButtonGroup, Navbar, Nav, Col } from "react-bootstrap"
 import Icon from "@mdi/react"
-import { mdiInstagram, mdiFacebookBox, mdiTwitter } from "@mdi/js"
+import { mdiInstagram, mdiFacebookBox } from "@mdi/js"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { title, children } = this.props
     let socialButtonGroup = (
       <ButtonGroup>
         <div>

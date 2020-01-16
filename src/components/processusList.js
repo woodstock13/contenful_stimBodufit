@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
 import ProcessusItem from "./processusItem"
 
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -11,12 +9,6 @@ function ProcessusList() {
   const { edges } = useAllProcessus()
   let aProcessusItems = edges
   let processusListComponent
-
-  //style here
-  const MainImage = styled.div`
-    flex: 100%;
-    margin-right: 1rem;
-  `
 
   processusListComponent = (nbBiguine, nbEnd) => (
     <Row>

@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Row, Col, Card, Media } from "react-bootstrap"
+import { Row, Col } from "react-bootstrap"
 import ArgumentItem from "./argumentItem"
 
 function ArgumentsList(props) {

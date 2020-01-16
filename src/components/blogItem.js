@@ -1,21 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Card, Col } from "react-bootstrap"
-
-const Post = styled.div`
-  display: flex;
-  margin: 1rem;
-`
-const PostImage = styled.div`
-  flex: 25%;
-  margin-right: 1rem;
-`
-const PostText = styled.div`
-  flex: 75%;
-`
 
 function BlogItem(props) {
   const data = props.data
@@ -25,7 +12,7 @@ function BlogItem(props) {
     <Col>
       <Card style={{ width: "18rem" }}>
         <div>
-          <Link style={{ boxShadow: `none` }} to={"blog/" + data.slug}>
+          <Link style={{ boxShadow: `none` }} to={"/blog/" + data.slug}>
             <Card.Img variant="top" src={data.image.fluid.src} />
           </Link>
         </div>

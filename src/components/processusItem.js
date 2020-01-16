@@ -1,6 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Media } from "react-bootstrap"
@@ -9,12 +7,6 @@ function ProcessusItem(props) {
   const num = props.number
   const title = props.title
   const description = props.desc
-
-  //style here
-  const Aprocessus = styled.div`
-    flex: 100%;
-    margin-right: 1rem;
-  `
 
   return (
     <Media>

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -90,7 +90,7 @@ function CarousselComponent() {
                   />
                   {insta ? (
                     <span>
-                      <a href={insta} target="_blank">
+                      <a href={insta} target="_blank" rel="noopener">
                         <Icon
                           path={mdiInstagram}
                           title="insta"

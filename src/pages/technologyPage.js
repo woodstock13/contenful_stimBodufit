@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container, Col, Row } from "react-bootstrap"
 
 import Layout from "../components/layout"
@@ -19,7 +18,10 @@ export default props => (
           </div>
         </Col>
         <Col xs={{ order: 12 }} md={4}>
-          <img src="https://imotion-ems.com/wp-content/uploads/2018/05/imotion_biojacket_new_01-2.png" />
+          <img
+            src="https://imotion-ems.com/wp-content/uploads/2018/05/imotion_biojacket_new_01-2.png"
+            alt="equipements"
+          />
         </Col>
       </Row>
     </Container>
