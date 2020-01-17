@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Row, Image, Col, Button } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainImage from "../components/mainImage"
-import { Container } from "react-bootstrap"
 
 class BlogPostContentfulTemplate extends React.Component {
   render() {
@@ -22,22 +23,12 @@ class BlogPostContentfulTemplate extends React.Component {
         />
         <Container>
           <article>
-            <header>
-              <p
-                style={{
-                  display: `block`,
-                }}
-              >
-                {post.date}
-              </p>
-            </header>
             <section
               dangerouslySetInnerHTML={{
                 __html: post.content.childContentfulRichText.html,
               }}
             />
             <hr />
-            <footer>{/* TODO */}</footer>
           </article>
 
           <nav>

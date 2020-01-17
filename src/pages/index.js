@@ -28,8 +28,8 @@ class HomePage extends React.Component {
         <Container>
           <Title title={"Nos Forces"} />
           <ArgumentsList arguments={argumentsContent} />
-          <Title title={"Nos News"} />
-          <BlogList posts={postsData} />
+          {/* <Title title={"Nos News"} />
+          <BlogList posts={postsData} /> */}
           <Title title={"Notre Méthodologie"} />
           <ProcessusList />
           <Title title={"Nos Coachs"} />
