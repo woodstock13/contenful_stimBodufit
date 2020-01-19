@@ -24,8 +24,8 @@ class SimpleMap extends Component {
         >
           <MapPin
             color={"red"}
-            lat={43.2890048}
-            lng={5.3941924}
+            lat={43.2888711}
+            lng={5.390233}
             text={"StimBodyFit"}
           />
         </GoogleMapReact>

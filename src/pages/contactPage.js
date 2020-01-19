@@ -23,7 +23,7 @@ export default props => (
           </h4>
           <ul style={{ fontFamily: "arial", fontSize: "18px" }}>
             <Icon path={mdiCheckBold} size={1} color="#389FCD" />
-            20 minutes = 4 heures de sport
+            20 minutes = 3 heures de sport
             <br />
             <Icon path={mdiCheckBold} size={1} color="#389FCD" />
             Coaching personnalisé
@@ -37,13 +37,10 @@ export default props => (
           <p style={{ fontFamily: "arial", fontSize: "18px" }}>
             Une fois votre formulaire envoyé, l'équipe STIMBODYFIT vous
             appellera pour fixer la date et l'heure de votre{" "}
-            <b> séance d'essai offerte</b>.
+            <b> séance d'essai offerte</b> (jusqu'au 29 Février 2020).
           </p>
         </Col>
         <Col xs={6} md={6}>
-          {/* <h4 style={{ textAlign: "left", paddingTop: "1em" }}>
-            <u>Formulaire d'inscription:</u>
-          </h4> */}
           <Form />
         </Col>
       </Row>
