@@ -34,14 +34,16 @@ class HomePage extends React.Component {
           <ProcessusList />
           <Title title={"Nos Coachs"} />
           <CarouselComponent />
-          {/* <Title title={"Nos Tarifs"} /> */}
+          <Title title={"Nos Tarifs"} />
           <PriceLandingPage />
           <Title title={"Nous Trouver"} />
           <Row>
             <Col>
               <ContactInfo location={this.props.location} />
             </Col>
-            <Col>{/* <SimpleMap /> */}</Col>
+            <Col>
+              <SimpleMap />
+            </Col>
           </Row>
         </Container>
       </Layout>
