@@ -25,7 +25,9 @@ function ArgumentsList(props) {
       <Col xs={{ order: 6 }} md={6}>
         <WhiteBlock />
         <MainImage>
-          <Img fluid={fluid} />
+          <a href="https://imotion-ems.com/fr/" target="_blank">
+            <Img fluid={fluid} />
+          </a>
         </MainImage>
         <WhiteBlock />
       </Col>
