@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap"
 import { Image } from "react-bootstrap"
 
 import ImagePrice from "../images/pricePage.png"
+import ImagePrice2 from "../images/pricePage2.png"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,7 +24,11 @@ export default props => (
     <SEO title="Nos Prix" />
     {/* <MainImage location={props.location} /> */}
     <Container style={{ margin: "0 auto", position: "relative" }}>
-      <Image src={ImagePrice} style={fullWidth} />
+      {new Date().getMonth() <= 1 ? (
+        <Image src={ImagePrice} style={fullWidth} />
+      ) : (
+        <Image src={ImagePrice2} style={fullWidth} />
+      )}
       <GetRichText location={props.location} />
     </Container>
   </Layout>
