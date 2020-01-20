@@ -2,8 +2,7 @@ import React, { Component } from "react"
 import GoogleMapReact from "google-map-react"
 import { MapPin } from "react-feather"
 
-let mapkey =
-  process.env.NETLIFY_MAP_KEY || "AIzaSyC2OP_An2PZkiIPp0ilyAYFDk8N8gCourE"
+let mapkey = "AIzaSyC2OP_An2PZkiIPp0ilyAYFDk8N8gCourE"
 
 class SimpleMap extends Component {
   static defaultProps = {
