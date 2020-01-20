@@ -2,7 +2,10 @@ import React, { Component } from "react"
 import GoogleMapReact from "google-map-react"
 import { MapPin } from "react-feather"
 
-let mapkey = "AIzaSyC2OP_An2PZkiIPp0ilyAYFDk8N8gCourE"
+let mapkey = ""
+if (process.env.NETLIFY_MAP_KEY) {
+  mapkey = process.env.NETLIFY_MAP_KEY
+}
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -24,8 +27,8 @@ class SimpleMap extends Component {
         >
           <MapPin
             color={"red"}
-            lat={43.2888711}
-            lng={5.390233}
+            lat={43.2888672}
+            lng={5.3924217}
             text={"StimBodyFit"}
           />
         </GoogleMapReact>

@@ -5,7 +5,7 @@ import "./Form.css"
 class FormMailChimp extends Component {
   render() {
     return (
-      // NOTABENE: faire matché pour chaque field avec mailchimp les : Audience fields and *|MERGE|* tags
+      // NOTABENE: faire matcher les attributs 'name'pour chaque field  mailchimp les : Audience fields and *|MERGE|* tags
       <Mailchimp
         action="https://hotmail.us4.list-manage.com/subscribe/post?u=64b5b1cf938c2beeb90467cfc&amp;id=2dcb8d1705"
         fields={[
@@ -27,6 +27,12 @@ class FormMailChimp extends Component {
             type: "number",
             required: true,
           },
+          // {
+          //   name: "MSG",
+          //   placeholder: "Message (optionnel)",
+          //   type: "text",
+          //   required: false,
+          // }
         ]}
         messages={{
           sending: "Envoie en cours...",
@@ -34,7 +40,7 @@ class FormMailChimp extends Component {
             "Merci de votre intéret, nous reviendrons vers vous au plus vite !",
           error:
             "❗️ Désolé une erreur est survenu merci de nous contacter via votre boite mail favorite :)",
-          empty: "Merci de remplir tous les champs du formulaire",
+          empty: "Merci de remplir tous les champs nécessaire du formulaire",
           duplicate: "Too many subscribe attempts for this email address",
           button: "C'est parti !",
         }}

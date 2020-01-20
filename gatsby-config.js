@@ -5,6 +5,7 @@ require("dotenv").config({
 const contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  mapkey: process.env.NETLIFY_MAP_KEY,
   host: process.env.CONTENTFUL_HOST,
 }
 
