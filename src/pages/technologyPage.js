@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import MainImage from "../components/mainImage"
 import GetRichText from "../components/getRichText"
 
+import imageJacket from "../images/imotion_biojacket_new_01-2.png"
+
 export default props => (
   <Layout location={props.location}>
     <SEO title="Technologie I-Motion" />
@@ -18,10 +20,7 @@ export default props => (
           </div>
         </Col>
         <Col xs={{ order: 12 }} md={4}>
-          <Image
-            src="https://imotion-ems.com/wp-content/uploads/2018/05/imotion_biojacket_new_01-2.png"
-            alt="equipements"
-          />
+          <Image src={imageJacket} alt="equipements" />
         </Col>
       </Row>
     </Container>
