@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Col, Row } from "react-bootstrap"
+import { Container, Col, Row, Image } from "react-bootstrap"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -18,7 +18,7 @@ export default props => (
           </div>
         </Col>
         <Col xs={{ order: 12 }} md={4}>
-          <img
+          <Image
             src="https://imotion-ems.com/wp-content/uploads/2018/05/imotion_biojacket_new_01-2.png"
             alt="equipements"
           />
