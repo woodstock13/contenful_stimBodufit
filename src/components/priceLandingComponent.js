@@ -9,27 +9,34 @@ function PriceLandingPage() {
   const { html } = usePriceTextParagraph()
   return (
     <Row style={{ margin: "0 auto" }}>
-      {new Date().getMonth() <= 1 ? (
-        <Image
-          style={{
-            minHeight: "50%",
-            minWidth: "50%",
-          }}
-          src={ImagePrice}
-          thumbnail
-          fluid
-        />
-      ) : (
-        <Image
-          style={{
-            minHeight: "50%",
-            minWidth: "50%",
-          }}
-          src={ImagePrice2}
-          thumbnail
-          fluid
-        />
-      )}
+      <div
+        style={{
+          minHeight: "50%",
+          minWidth: "50%",
+        }}
+      >
+        {new Date().getMonth() <= 1 ? (
+          <Image
+            style={{
+              minHeight: "50%",
+              minWidth: "50%",
+            }}
+            src={ImagePrice}
+            thumbnail
+            fluid
+          />
+        ) : (
+          <Image
+            style={{
+              minHeight: "50%",
+              minWidth: "50%",
+            }}
+            src={ImagePrice2}
+            thumbnail
+            fluid
+          />
+        )}
+      </div>
     </Row>
   )
 }
