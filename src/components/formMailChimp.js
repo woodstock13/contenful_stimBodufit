@@ -27,21 +27,22 @@ class FormMailChimp extends Component {
             type: "number",
             required: true,
           },
-          // {
-          //   name: "MSG",
-          //   placeholder: "Message (optionnel)",
-          //   type: "text",
-          //   required: false,
-          // }
+          {
+            name: "MSG",
+            placeholder: "Message (optionnel)",
+            type: "text",
+            required: false,
+          },
         ]}
         messages={{
           sending: "Envoie en cours...",
           success:
-            "Merci de votre intéret, nous reviendrons vers vous au plus vite !",
+            "Merci de votre intérêt, nous reviendrons vers vous au plus vite !",
           error:
             "❗️ Désolé une erreur est survenu merci de nous contacter via votre boite mail favorite :)",
-          empty: "Merci de remplir tous les champs nécessaire du formulaire",
-          duplicate: "Too many subscribe attempts for this email address",
+          empty: "Merci de remplir tous les champs nécessaire !",
+          duplicate:
+            "Vous nous avez déjà envoyé un message avec cette adresse mail",
           button: "C'est parti !",
         }}
         // Add a personalized class
