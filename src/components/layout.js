@@ -16,7 +16,10 @@ class Layout extends React.Component {
           <a href="https://www.instagram.com/stimbodyfit/" target="_blank">
             <Icon path={mdiInstagram} title="insta" size={1} color="red" />
           </a>
-          <a href="https://www.facebook.com/body.fit.982" target="_blank">
+          <a
+            href="https://www.facebook.com/Stim-Body-Fit-106065680934091/"
+            target="_blank"
+          >
             <Icon path={mdiFacebookBox} title="fb" size={1} color="#1565C0" />
           </a>
         </div>

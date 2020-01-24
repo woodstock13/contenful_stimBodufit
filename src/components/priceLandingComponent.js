@@ -10,9 +10,25 @@ function PriceLandingPage() {
   return (
     <Row style={{ margin: "0 auto" }}>
       {new Date().getMonth() <= 1 ? (
-        <Image src={ImagePrice} thumbnail fluid />
+        <Image
+          style={{
+            minHeight: "50%",
+            minWidth: "50%",
+          }}
+          src={ImagePrice}
+          thumbnail
+          fluid
+        />
       ) : (
-        <Image src={ImagePrice2} thumbnail fluid />
+        <Image
+          style={{
+            minHeight: "50%",
+            minWidth: "50%",
+          }}
+          src={ImagePrice2}
+          thumbnail
+          fluid
+        />
       )}
     </Row>
   )
