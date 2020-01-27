@@ -22,16 +22,7 @@ function ArgumentsList(props) {
   `
   argumentsComponent = (
     <Row>
-      <Col xs={{ order: 6 }} md={6}>
-        <WhiteBlock />
-        <MainImage>
-          <a href="https://imotion-ems.com/fr/" target="_blank">
-            <Img fluid={fluid} />
-          </a>
-        </MainImage>
-        <WhiteBlock />
-      </Col>
-      <Col xs={{ order: 1 }} md={3} style={{ textAlign: "right" }}>
+      <Col sm={(12, { order: 1 })} md={3} style={{ textAlign: "right" }}>
         {aArguments.slice(0, 3).map(oneArgument => (
           <ArgumentItem
             key={oneArgument.node.title}
@@ -42,7 +33,16 @@ function ArgumentsList(props) {
           />
         ))}
       </Col>
-      <Col xs={{ order: 12 }} md={3} style={{ textAlign: "left" }}>
+      <Col sm={(12, { order: 2 })} md={6}>
+        <WhiteBlock />
+        <MainImage>
+          <a href="https://imotion-ems.com/fr/" target="_blank">
+            <Img fluid={fluid} />
+          </a>
+        </MainImage>
+        <WhiteBlock />
+      </Col>
+      <Col sm={(12, { order: 3 })} md={3} style={{ textAlign: "left" }}>
         {aArguments.slice(3, 6).map(oneArgument => (
           <ArgumentItem
             key={oneArgument.node.title}

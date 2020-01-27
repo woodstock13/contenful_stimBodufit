@@ -24,12 +24,14 @@ export default props => (
     <SEO title="Nos Prix" />
     {/* <MainImage location={props.location} /> */}
     <Container style={{ margin: "0 auto", position: "relative" }}>
-      {new Date().getMonth() <= 1 ? (
-        <Image src={ImagePrice} style={fullWidth} />
-      ) : (
-        <Image src={ImagePrice2} style={fullWidth} />
-      )}
-      <GetRichText location={props.location} />
+      <div>
+        {new Date().getMonth() <= 1 ? (
+          <Image src={ImagePrice} style={fullWidth} />
+        ) : (
+          <Image src={ImagePrice2} style={fullWidth} />
+        )}
+        <GetRichText location={props.location} />
+      </div>
     </Container>
   </Layout>
 )

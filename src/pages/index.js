@@ -38,10 +38,10 @@ class HomePage extends React.Component {
           <PriceLandingPage />
           <Title title={"Nous Trouver"} />
           <Row>
-            <Col>
+            <Col class="col-6">
               <ContactInfo location={this.props.location} />
             </Col>
-            <Col>
+            <Col class="col-6">
               <SimpleMap />
             </Col>
           </Row>
