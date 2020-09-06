@@ -2,8 +2,7 @@ import React from "react"
 import { useStaticQuery } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Row, Image, Col } from "react-bootstrap"
-import ImagePrice from "../images/pricePage.png"
-import ImagePrice2 from "../images/pricePage2.png"
+import ImagePrice from "../images/priceImage.png"
 
 function PriceLandingPage() {
   const { html } = usePriceTextParagraph()
@@ -15,27 +14,15 @@ function PriceLandingPage() {
           minWidth: "50%",
         }}
       >
-        {new Date().getMonth() <= 1 ? (
-          <Image
-            style={{
-              minHeight: "50%",
-              minWidth: "50%",
-            }}
-            src={ImagePrice}
-            thumbnail
-            fluid
-          />
-        ) : (
-          <Image
-            style={{
-              minHeight: "50%",
-              minWidth: "50%",
-            }}
-            src={ImagePrice2}
-            thumbnail
-            fluid
-          />
-        )}
+        <Image
+          style={{
+            minHeight: "50%",
+            minWidth: "50%",
+          }}
+          src={ImagePrice}
+          thumbnail
+          fluid
+        />
       </div>
     </Row>
   )
